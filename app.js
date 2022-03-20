@@ -14,6 +14,8 @@ app.get('/', function(req, res){
 
 app.post ("/", function(req, res){
 
+    var firstName = req.body.firstName
+
 })
 
 app.listen(3000, function () {
