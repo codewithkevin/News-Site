@@ -18,9 +18,22 @@ app.post ("/", function(req, res){
     var lastName = req.body.lastName;
     var email = req.body.email;
 
-    var data = 
+    var data = {
+        members: [
+            {
+                email_address: email,
+                status: "subscribed",
+                merge_fields: {
+                    FNAME: "firstName",
+                    LNAME: "lastName"
+                }
+            }
+        ]
+    };
 
-})
+   var  
+
+});
 
 app.listen(3000, function () {
     console.log('Server is running on port 3000')
