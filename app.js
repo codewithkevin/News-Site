@@ -31,3 +31,13 @@ app.listen(3000, function () {
 
 //**Audice */
 ea8e470090
+
+//**Update */
+const mailchimpClient = require("mailchimp_transactional")("YOUR_API_KEY");
+
+const run = async () => {
+  const response = await mailchimpClient.templates.update({ name: "name" });
+  console.log(response);
+};
+
+run();
