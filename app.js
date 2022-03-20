@@ -31,7 +31,9 @@ app.post ("/", function(req, res){
         ]
     };
 
-   var  
+   var jsonData = JSON.stringify(data);
+   
+   console.log (jsonData)
 
 });
 
