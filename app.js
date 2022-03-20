@@ -5,7 +5,7 @@ const request = require('request');
 const app = express();
 
 app.get('/', function(req, res){
-    res.sendFile(__dirname + '/signup.html');
+    res.sendFile(__dirname + '/singup.html');
 });
 
 app.listen(3000, function () {
