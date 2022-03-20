@@ -18,7 +18,7 @@ app.post ("/", function(req, res){
     var lastName = req.body.lastName;
     var email = req.body.email;
 
-    console.log(firstName, lastName, email);
+    var data = 
 
 })
 
