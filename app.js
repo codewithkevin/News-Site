@@ -39,12 +39,16 @@ app.post ("/", function(req, res){
     const options = {
         method: 'POST',
         auth: 'Kevin:de43a02608aff9c8cdfe9e667533e2e5-us14'
-        
     }
 
-   https.request(url, options, function (response) {
-
+   const request = https.request(url, options, function (response) {
+        response.on('data', function (data) {
+            console.log(JSON.parse(data));
+        })
    })
+
+   request.write(jsonData);
+   request.end();
 
  
 
