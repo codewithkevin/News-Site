@@ -19,7 +19,7 @@ app.post ("/", function(req, res){
     const lastName = req.body.lastName;
     const email = req.body.email;
 
-    var data = {
+    const data = {
         members: [
             {
                 email_address: email,
@@ -34,18 +34,18 @@ app.post ("/", function(req, res){
 
    const jsonData = JSON.stringify(data);
 
-   const url = 'https://us14.api.mailchimp.com/3.0/ea8e470090'
+   const url = 'https://us14.api.mailchimp.com/3.0/lists/ea8e470090'
    
     const options = {
         method: 'POST',
         auth: 'kevin:de43a02608aff9c8cdfe9e667533e2e5-us14'
-    }
+    };
 
    const request = https.request(url, options, function (response) {
         response.on('data', function (data) {
             console.log(JSON.parse(data));
-        })
-   })
+        });
+   });
 
    request.write(jsonData);
    request.end();
@@ -57,6 +57,8 @@ app.post ("/", function(req, res){
 app.listen(3000, function () {
     console.log('Server is running on port 3000')
 })
+
+
 
 //** API_KEY **//
 // de43a02608aff9c8cdfe9e667533e2e5-us14
