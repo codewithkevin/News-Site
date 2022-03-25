@@ -44,7 +44,7 @@ app.post ("/", function(req, res){
    const request = https.request(url, options, function (response) {
         
         if(response.statusCode === 200){
-            res.send("nICE ")
+            res.sendFile(__dirname + "/success.html")
         }
 
         response.on('data', function (data) {
