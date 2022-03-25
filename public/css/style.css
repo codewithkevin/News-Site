@@ -52,3 +52,8 @@ body {
       font-size: 3.5rem;
     }
   }
+
+.success {
+  justify-content: center;
+  align-items: center;
+}  
